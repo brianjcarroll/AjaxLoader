@@ -35,6 +35,7 @@
       httpRequest.send();
       var response = httpRequest.responseText;
       var jsonResponse = JSON.parse(response);
+      var stringResponse = response.toString();
       httpRequest.onreadystatechange = function(){
         if (httpRequest.readyState == 0) {
           console.log('0 - not initialized');
@@ -55,7 +56,7 @@
           }
         }
       }
-      this.updatePage(jsonResponse);
+      this.updatePage(jsonResponse, stringResponse);
     },
 
     bindListener: function () {
@@ -74,8 +75,9 @@
 
     },
 
-    updatePage: function(data) {
-      console.log(data);
+    updatePage: function(data, dataTwo) {
+      console.log('data', data);
+      console.log('dataTwo', dataTwo);
     }
 
   };
