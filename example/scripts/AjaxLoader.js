@@ -33,7 +33,7 @@
     _fetchData: function (url) {
       httpRequest.open('GET', url);
       httpRequest.send();
-      var response = httpRequest.responseText;
+      var response;
       // var jsonResponse = JSON.parse(response);
       // var stringResponse = response.toString();
       httpRequest.onreadystatechange = function(){
@@ -53,6 +53,7 @@
           console.log('4 - request finished, response ready');
           if(httpRequest.status == 200) {
             console.log('good to go');
+            response = httpRequest.responseText;
           }
         }
       }
