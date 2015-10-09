@@ -34,10 +34,10 @@
       httpRequest.open('GET', url);
       httpRequest.send();
       var response = httpRequest.responseText;
+      var jsonResponse = JSON.parse(response);
       httpRequest.onreadystatechange = function(){
         if (httpRequest.readyState == 0) {
           console.log('0 - not initialized');
-
         }
         if (httpRequest.readyState == 1) {
           console.log('1 - server connection established');
@@ -55,7 +55,7 @@
           }
         }
       }
-      this.updatePage(response);
+      this.updatePage(jsonResponse);
     },
 
     bindListener: function () {
