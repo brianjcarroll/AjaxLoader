@@ -34,6 +34,27 @@
       httpRequest.open('GET', url);
       httpRequest.send();
       var response = httpRequest.responseText;
+      httpRequest.onreadystatechange = function(){
+        if (httpRequest.readyState == 0) {
+          console.log('0 - not initialized');
+
+        }
+        if (httpRequest.readyState == 1) {
+          console.log('1 - server connection established');
+        }
+        if (httpRequest.readyState == 2) {
+          console.log('2 - request received');
+        }
+        if (httpRequest.readyState == 3) {
+          console.log('3 - processing request');
+        }
+        if (httpRequest.readyState == 4) {
+          console.log('4 - request finished, response ready');
+          if(httpRequest.status == 200) {
+            console.log('good to go');
+          }
+        }
+      }
       this.updatePage(response);
     },
 
