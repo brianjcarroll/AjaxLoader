@@ -56,7 +56,7 @@
             this.updatePage(response);
           }
         }
-      }
+      }.bind(this);
       httpRequest.open('GET', url);
       httpRequest.send();
     },
