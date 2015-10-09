@@ -38,12 +38,11 @@
 
     bindListener: function () {
       var anchorContainer = document.querySelector(this.anchorContainer);
-      console.log(anchorContainer);
       anchorContainer.addEventListener('click', function(e){
         console.log(e.target);
         if(e.target && e.target.nodeName == 'A') {
           e.preventDefault();
-          // console.log(e.target.getAttribute('href'));
+          console.log(e.target.getAttribute('href'));
           this._fetchData(e.target.getAttribute('href'));
         }
       }.bind(this));
