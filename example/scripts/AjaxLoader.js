@@ -56,7 +56,7 @@
           }
         }
       }
-      this.updatePage(jsonResponse, stringResponse);
+      this.updatePage(jsonResponse);
     },
 
     bindListener: function () {
@@ -75,7 +75,7 @@
 
     },
 
-    updatePage: function(data, dataTwo) {
+    updatePage: function(data) {
       console.log('data', data);
       // console.log('dataTwo', dataTwo);
     }
