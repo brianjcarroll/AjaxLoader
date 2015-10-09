@@ -53,7 +53,7 @@
           console.log('4 - request finished, response ready');
           if(httpRequest.status == 200) {
             console.log('good to go');
-            response = httpRequest.responseText;
+            response = httpRequest.response;
           }
         }
       }
