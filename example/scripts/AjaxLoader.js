@@ -35,7 +35,7 @@
       httpRequest.send();
       var response = httpRequest.responseText;
       var jsonResponse = JSON.parse(response);
-      var stringResponse = response.toString();
+      // var stringResponse = response.toString();
       httpRequest.onreadystatechange = function(){
         if (httpRequest.readyState == 0) {
           console.log('0 - not initialized');
@@ -77,7 +77,7 @@
 
     updatePage: function(data, dataTwo) {
       console.log('data', data);
-      console.log('dataTwo', dataTwo);
+      // console.log('dataTwo', dataTwo);
     }
 
   };
