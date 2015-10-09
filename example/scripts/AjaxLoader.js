@@ -33,7 +33,7 @@
     _fetchData: function (url) {
       httpRequest.open('GET', url);
       httpRequest.send();
-      this.updatePage(httpRequest.responseText);
+      this.updatePage(httpRequest.response);
     },
 
     bindListener: function () {
