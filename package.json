@@ -1,0 +1,25 @@
+{
+  "name": "ajaxloader",
+  "version": "1.0.0",
+  "description": "Ajax load your site's pages",
+  "main": "app.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianjcarroll/AjaxLoader.git"
+  },
+  "author": "Brian Carroll",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brianjcarroll/AjaxLoader/issues"
+  },
+  "homepage": "https://github.com/brianjcarroll/AjaxLoader#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
