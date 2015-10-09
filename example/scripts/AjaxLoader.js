@@ -31,8 +31,7 @@
   window.AjaxLoader.prototype = {
 
     _fetchData: function (url) {
-      httpRequest.open('GET', url);
-      httpRequest.send();
+
       var response;
       // var jsonResponse = JSON.parse(response);
       // var stringResponse = response.toString();
@@ -53,11 +52,13 @@
           console.log('4 - request finished, response ready');
           if(httpRequest.status == 200) {
             console.log('good to go');
-            response = httpRequest.response;
+            response = httpRequest.responseText;
+            this.updatePage(response);
           }
         }
       }
-      this.updatePage(response);
+      httpRequest.open('GET', url);
+      httpRequest.send();
     },
 
     bindListener: function () {
