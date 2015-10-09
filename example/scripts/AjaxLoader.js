@@ -24,7 +24,7 @@
     // The container to inject data
     this.container = config.container || null;
 
-    httpRequest.onreadystatechange = this.handleRequest;
+    // httpRequest.onreadystatechange = this.handleRequest;
     this.bindListener();
   };
 
@@ -34,7 +34,7 @@
       httpRequest.open('GET', url);
       httpRequest.send();
       var response = httpRequest.responseText;
-      var jsonResponse = JSON.parse(response);
+      // var jsonResponse = JSON.parse(response);
       // var stringResponse = response.toString();
       httpRequest.onreadystatechange = function(){
         if (httpRequest.readyState == 0) {
@@ -56,7 +56,7 @@
           }
         }
       }
-      this.updatePage(jsonResponse);
+      this.updatePage(response);
     },
 
     bindListener: function () {
